@@ -1,0 +1,49 @@
+<div id="reg">
+        <div class="container">
+                <div class="row">
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                           <form action="/user/reg" method="POST">
+                            <p style="font-size: 30px; text-align: center" id="r">Register</p>
+                            <table class="table" style="width: 600px; margin:auto; border: 2px solid black; border-collapse: collapse;">
+                                <tr>
+                                    <td>Name :</td>
+                                    <td><input type="text" class="form-control" name="nr" [(ngModel)]="name" placeholder="Enter Name" required></td>
+                                </tr>
+                                <tr>
+                                    <td>Username :</td>
+                                    <td><input type="text" class="form-control" name="unr" [(ngModel)]="username" placeholder="Enter Username" required></td>
+                                </tr>
+            
+                                <tr>
+                                    <td>Password :</td>
+                                    <td><input type="password" class="form-control" name="pwr" [(ngModel)]="password" placeholder="Enter Password" required></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Mobile :</td>
+                                    <td><input type="text" class="form-control" name="mr" [(ngModel)]="mobile" pattern="[6789][0-9]{9}" placeholder="Enter Mobile" required></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>Email :</td>
+                                    <td><input type="email" class="form-control" name="er" [(ngModel)]="email" placeholder="Enter Email" required></td>
+                                </tr>
+                                <tr>
+                                    <td>Role :</td>
+                                    <td><select  name="role" [(ngModel)]="role" class="form-control">
+                                        <option value="admin">admin</option>
+                                        <option value="user">user</option>
+                                    </select>
+                                </td>
+                                </tr>
+                                <tr style="text-align: right">                        
+                                        <td><button class="btn btn-success" type="submit" (click)="signUp()"id="rgbtn" style="width: 150px">Sign Up</button></td>
+                                        <td></td>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+</div>
+ 
+  
